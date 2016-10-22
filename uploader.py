@@ -25,7 +25,7 @@ try:
           ftppath = row[4]
           htmlfile = row[1]
           rightsPermission = row[2]
-          if ocrProcessStatus == "Completed" or rightsPermission == "Blocked":
+          if ocrProcessStatus == "Completed" or ocrProcessStatus == "Failed" or rightsPermission == "Blocked":
                print "Completed.  Skipping " + htmlfile
                continue
                

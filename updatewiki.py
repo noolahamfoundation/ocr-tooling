@@ -42,7 +42,7 @@ try:
           wikiPageTitle = row[7]
           htmlfile = row[1]
           
-          if ocrProcessStatus == "Completed" or rightsPermission == "Blocked":
+          if ocrProcessStatus == "Completed" or ocrProcessStatus == "Failed" or rightsPermission == "Blocked":
                print "Completed.  Skipping " + htmlfile
                continue
                
