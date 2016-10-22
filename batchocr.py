@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+#version 22102016v1
+
 import ftplib
 import os
 import csv
@@ -37,6 +39,9 @@ try:
           rightsPermission = row[2]
           pdfurl = row[3]
           title = row[7]
+          columnNum = ""
+          if(len(row) >= 10):
+              columnNum = row[9]
           title = title.rstrip()
           if ocrProcessStatus == "Success" or ocrProcessStatus == "Completed" or rightsPermission == "Blocked":
                print ocrProcessStatus + " Skipping " + pdfurl
@@ -44,6 +49,8 @@ try:
 
           print "do_ocr " + pdfurl 
           actualColumnNum = "2"
+          if not (columnNum == ""):
+               actualColumnNum = columnNum
           createConfigFile("config.ini", pdfurl, actualColumnNum, title)          
           os.system("python do_ocr.py")
           ocrResultList.append(noolahamNumber)
