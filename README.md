@@ -1,9 +1,12 @@
 # ocr-tooling
 
 ## Scripts
-* batchocr.py
-* checkResult.py
-* uploader.py
-* updatewiki.py
-* sitemap.py
+* batchocr.py - OCR4wikisource தனிக்கோப்பை எழுத்துணரியாக்கம் செய்கிறது.  இந்த நிரல் ஒரு பட்டியலைச் செய்கிறது.
+* checkResult.py - எவை சரியாகச் எழுத்துணரியாக்கம் செய்யப்பட்டன என்பதைப் கணக்கிடகிறது.
+* cleanup.bash - OCR4wikisource  உருவாக்கிய தற்காலிக கோப்புக்களை நீக்குகிறது.
+* uploader.py - வழங்கிக்கு எப்.ரி.பி மூலம் பதிவேற்றுகிறது.  
+* updatewiki.py - விக்கிகிப் பக்கத்தில் எழுத்துணிரியாக்க இணைப்பை இணைக்கிறது.
+* sitemap.py - கூகிள் தேடல் பொறி உள்ளடக்கம் (index) செய்ய உதவப் பயன்படும் sitemap.xml ஐ உருவாக்கப் பயன்படுகிறது.
+
+
 
